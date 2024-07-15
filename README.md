@@ -1,6 +1,6 @@
 ### Code Review Helper
 
-Code Review Helper is a powerful tool designed to assist developers in reviewing their code. By leveraging FastAPI and Cohere's advanced language models, this tool analyzes code snippets to provide valuable suggestions for improvements, highlight potential bugs, and generate documentation comments. Whether you're working on a personal project or collaborating with a team, Code Review Helper enhances your code quality and boosts productivity.
+Code Review Helper is a simple tool designed to assist developers in reviewing their code. By leveraging FastAPI and Cohere's advanced language models, this tool analyzes code snippets to provide valuable suggestions for improvements, highlight potential bugs, and generate documentation comments. Whether you're working on a personal project or collaborating with a team, Code Review Helper enhances your code quality and boosts productivity.
 
 #### Features
 - **Automated Code Analysis:** Quickly analyze code snippets for improvements and potential issues.
