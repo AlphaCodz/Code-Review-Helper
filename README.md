@@ -4,7 +4,6 @@ Code Review Helper is a powerful tool designed to assist developers in reviewing
 
 #### Features
 - **Automated Code Analysis:** Quickly analyze code snippets for improvements and potential issues.
-- **Documentation Generation:** Automatically generate meaningful documentation comments.
 - **Multi-Language Support:** Detects and reviews code in various programming languages.
 - **Simple API Integration:** Easily integrate with your existing workflows using a RESTful API.
 - **Real-Time Feedback:** Get instant feedback on your code to accelerate the development process.
@@ -19,13 +18,12 @@ Code Review Helper is a powerful tool designed to assist developers in reviewing
 
 2. Create and activate a virtual environment:
     ```sh
-    python3 -m venv venv
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    poetry shell
     ```
 
 3. Install the required dependencies:
     ```sh
-    pip install -r requirements.txt
+    poetry install
     ```
 
 4. Run the server:
@@ -39,13 +37,13 @@ Send a POST request to the `/review_code/` endpoint with the code snippet you wa
 
 **Curl Command:**
 ```sh
-curl -X POST "http://127.0.0.1:8000/review_code/" -H "Content-Type: application/json" -d '{"code_snippet": "def add(a, b):\n    return a + b"}'
+curl -X POST "http://127.0.0.1:8000/review_code/" -H "Content-Type: application/json" -d '{"message": "def add(a, b):\n    return a + b"}'
 ```
 
 **Example Response:**
 ```json
 {
-  "analysis": "1. The function `add` is simple and works as intended. However, consider adding type hints for better readability and error checking:\n\n```python\ndef add(a: int, b: int) -> int:\n    return a + b\n```\n\n2. Add a docstring to explain what the function does:\n\n```python\ndef add(a: int, b: int) -> int:\n    \"\"\"Returns the sum of a and b.\"\"\"\n    return a + b\n```"
+"1. The function `add` is simple and works as intended. However, consider adding type hints for better readability and error checking:\n\n```python\ndef add(a: int, b: int) -> int:\n    return a + b\n```\n\n2. Add a docstring to explain what the function does:\n\n```python\ndef add(a: int, b: int) -> int:\n    \"\"\"Returns the sum of a and b.\"\"\"\n    return a + b\n```"
 }
 ```
 
