@@ -6,6 +6,25 @@ __pycache__/
 # C extensions
 *.so
 
+
+# Poetry
+__pypackages__/
+poetry.lock
+# Testing database file (if using SQLite with FastAPI)
+test.db
+# IDE files (specific to your IDE, e.g., VSCode, PyCharm)
+.idea/
+.vscode/
+# Compiled Python files
+*.pyc
+# Environment variables
+.env
+# Logs
+*.log
+# Dependency directories
+venv/
+
+
 # Distribution / packaging
 .Python
 build/
@@ -25,6 +44,8 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+
+*poetry.lock
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
